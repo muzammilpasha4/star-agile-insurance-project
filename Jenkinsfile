@@ -29,7 +29,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                    sh 'docker run -itd --name banking -p 9090:9090 muzammilp/insuranceimgaddbook:latest'
+                    sh 'docker run -itd --name insurance -p 9090:9090 muzammilp/insuranceimgaddbook:latest'
                 }
             }
     }
