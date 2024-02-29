@@ -1,0 +1,16 @@
+node{
+    stage('Git checkout'){
+        git 'https://github.com/muzammilpasha4/star-agile-insurance-project'
+    }
+    stage('Deployment using K8s'){
+        sh 'sudo kubectl apply -f kubernetesfile.yml'
+    }
+    stage('To get All data'){
+        sh 'sudo kubectl get all'
+    }
+    stage('To View the pods'){
+        sh 'sudo kubectl get pods -o wide'
+        sh 'curl http://checkip.amazonaws.com'
+    }
+    
+}
