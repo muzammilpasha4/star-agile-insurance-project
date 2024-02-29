@@ -17,4 +17,4 @@
     become_user : root
 
   - name: Deploy Docker Container
-    command: docker run -itd -p 8084:8084 muzammilp/insuranceimgaddbook:latest
+    command: docker run -itd -p 9090:9090 muzammilp/insuranceimgaddbook:latest
