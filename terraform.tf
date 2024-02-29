@@ -11,6 +11,8 @@ terraform {
 # Configure the AWS provider
 provider "aws" {
   region = "us-east-1"
+  access_key = "AKIAR2CJPSKH4GGN677G"
+  secret_key = "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"
 }
 # Creating a VPC
 resource "aws_vpc" "first-vpc" {
@@ -125,7 +127,7 @@ resource "aws_eip" "proj-eip" {
 
 
 # Creating an ubuntu EC2 instance
-resource "aws_instance" "Prod-Server" {
+resource "aws_instance" "Test-Server" {
  ami = "ami-0ef82eeba2c7a0eeb"
  instance_type = "t2.micro"
  availability_zone = "us-east-1b"
